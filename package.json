@@ -1,0 +1,25 @@
+{
+  "name": "bundlehash-webpack-plugin",
+  "version": "0.1.1",
+  "description": "Insert hashed bundle names in to static HTML files in webpack",
+  "main": "lib/index.js",
+  "keywords": [
+    "webpack",
+    "plugin",
+    "hash",
+    "static",
+    "html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wearevolt/bundlehash-webpack-plugin.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander `Staltec` Prozorov",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.12.0"
+  }
+}

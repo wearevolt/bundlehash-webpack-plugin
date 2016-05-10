@@ -2,21 +2,22 @@
 
 This is a [webpack](http://webpack.github.io/) plugin helps to create static HTML files with hashed bundle names in the build directory.
 
-**IMPORTANT!** Only for production build. Do not use with `webpack-dev-server`!
+**IMPORTANT!** Only for production build. Do not use with [webpack-dev-server](https://webpack.github.io/docs/webpack-dev-server.html)!
 
 ### Install
-```
+`
 npm install --save-dev bundlehash-webpack-plugin
-```
+`
 
 ### Usage
-Plugin take template HTML file and replace 
+Plugin take static HTML file as template and replace 
+
 `'<!-- [prefix]_[chunk_name]_[extension] --><!-- /[prefix]_[chunk_name]_[extension] -->'`
-to 
+
+blocks to hashed chunks.
 
 ####Simple usage:
 Webpack production config:
-
 ```javascript
 module.exports = {
 
@@ -42,7 +43,6 @@ module.exports = {
 ```
 
 File `'static/index.html'` as template:
-
 ```html
 <!DOCTYPE html>
 <html class='default' dir='ltr'>
@@ -65,7 +65,6 @@ File `'static/index.html'` as template:
 ```
 
 File `'dist/index.html'` as result target file:
-
 ```html
 <!DOCTYPE html>
 <html class='default' dir='ltr'>
@@ -82,7 +81,6 @@ File `'dist/index.html'` as result target file:
   <script src="/js/app.bundle.893f4a1de32c17e9bad5.js"></script>
 </html>
 ```
-
 
 ####Multiple files:
 ```javascript
@@ -111,8 +109,12 @@ plugins: [
         prefix: 'chunk',
 
         helpers: {
-            'css': function (path) { return '<link rel="stylesheet" media="all" href="' + path + '" />'},
-            'js': function (path) { return '<script src="' + path + '"></script>'}
+            'css': function (path) { 
+                return '<link rel="stylesheet" media="all" href="' + path + '" />'
+            },
+            'js': function (path) { 
+                return '<script src="' + path + '"></script>'
+            }
         }
     
         file: [
@@ -125,7 +127,9 @@ plugins: [
                 prefix: 'chunk_file',
 
                 helpers: {
-                    'js': function (path) { return '<script type="text/javascript" src="' + path + '" defer></script>'}
+                    'js': function (path) { 
+                        return '<script type="text/javascript" src="' + path + '" defer></script>'
+                    }
                 },
 
                 template: path.join(__dirname, 'static/about.html'),
@@ -157,7 +161,8 @@ plugins: [
     - define fist part of name of chunk files mount point: `'<!-- [prefix]_app_js --><!-- /[prefix]_app_js -->'` 
 * `helpers`
     - is optional
-    - defaults is contain templates for `'js'` and `'css'` chunks 
+    - defaults is contain templates for `'js'` and `'css'` chunks. 
+      See `'helpers'` in (Advanced usage)[https://github.com/wearevolt/bundlehash-webpack-plugin#advanced-usage] section. 
     - can be a glob
     - can be overwritten in `'file'` property level
     - define template for chunk file extension    

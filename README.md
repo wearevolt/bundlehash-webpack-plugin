@@ -10,11 +10,9 @@ npm install --save-dev bundlehash-webpack-plugin
 `
 
 ### Usage
-Plugin take static HTML file as template and replace 
-
+Plugin take static HTML file as template and replace blocks
 `'<!-- [prefix]_[chunk_name]_[extension] --><!-- /[prefix]_[chunk_name]_[extension] -->'`
-
-blocks to hashed chunks.
+to hashed chunks.
 
 ####Simple usage:
 Webpack production config:

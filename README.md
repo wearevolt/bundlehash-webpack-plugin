@@ -181,6 +181,10 @@ plugins: [
     - it can only be in `'file'` level
     - must be a path relative to the target file
 
+### TODO
+* Unit tests
+* Add to `'file'` property limits by allowed chunk names
+
 ### Issues
 
 Have a bug? Please create an issue here on GitHub!

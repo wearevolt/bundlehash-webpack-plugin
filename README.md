@@ -152,7 +152,7 @@ plugins: [
     - defaults is `'utf8'`
     - can be a glob
     - can be overwritten in `'file'` property level
-    - define encoding used to open the template and target files
+    - define encoding used to open the template and save target files
 * `prefix`
     - is optional
     - defaults is `'chunk'`
@@ -161,11 +161,11 @@ plugins: [
     - define fist part of name of chunk files mount point: `'<!-- [prefix]_app_js --><!-- /[prefix]_app_js -->'` 
 * `helpers`
     - is optional
-    - defaults is contain templates for `'js'` and `'css'` chunks. 
-      See `'helpers'` in [Advanced usage](https://github.com/wearevolt/bundlehash-webpack-plugin#advanced-usage) section. 
+    - defaults already contain templates for `'js'` and `'css'` chunks. 
+      See `'helpers'` in [Advanced usage](https://github.com/wearevolt/bundlehash-webpack-plugin#advanced-usage) section for defaults. 
     - can be a glob
     - can be overwritten in `'file'` property level
-    - define template for chunk file extension    
+    - define micro templates for chunk file extension    
 * `file`
     - is required
     - can be a object or array of objects
@@ -174,11 +174,11 @@ plugins: [
 * `template`
     - is required
     - it can only be in `'file'` level
-    - can be path relative to the template file
+    - must be a path relative to the template file
 * `target`
     - is required
     - it can only be in `'file'` level
-    - can be path relative to the target file
+    - must be a path relative to the target file
 
 ### Issues
 

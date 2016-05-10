@@ -72,6 +72,7 @@ File `'dist/index.html'` as result target file:
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' />
     <title>App Title</title>
+    
     <link rel="stylesheet" media="all" href="/css/app.bundle.893f4a1de32c17e9bad5.css" />
   </head>
   <body class='fade-out' data-version='1'>

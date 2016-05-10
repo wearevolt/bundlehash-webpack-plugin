@@ -162,7 +162,7 @@ plugins: [
 * `helpers`
     - is optional
     - defaults is contain templates for `'js'` and `'css'` chunks. 
-      See `'helpers'` in (Advanced usage)[https://github.com/wearevolt/bundlehash-webpack-plugin#advanced-usage] section. 
+      See `'helpers'` in [Advanced usage](https://github.com/wearevolt/bundlehash-webpack-plugin#advanced-usage) section. 
     - can be a glob
     - can be overwritten in `'file'` property level
     - define template for chunk file extension    

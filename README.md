@@ -17,6 +17,8 @@ to hashed chunks.
 ####Simple usage:
 Webpack production config:
 ```javascript
+var BundleHashWebpackPlugin = require('bundlehash-webpack-plugin');
+
 module.exports = {
 
     entry:  {
